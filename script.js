@@ -1,12 +1,12 @@
 function valor() {
     //Função que carrega as informações do JSON
     fetch('dados.json').then(resposta => resposta.json()).then(banco => {
-        
+
         var identificador = document.getElementById('valorDigitado').value
-        var encontrado = false      
-        
-        banco.forEach(pessoa =>{
-            if(identificador == pessoa.cpf) {
+        var encontrado = false
+
+        banco.forEach(pessoa => {
+            if (identificador == pessoa.cpf) {
                 //JQuery
                 var linkSite = `<a href="${pessoa.link}" target='_blank'> Visite o Site</a>`
                 document.getElementById('imagem').innerHTML = pessoa.imagem
@@ -19,8 +19,14 @@ function valor() {
                 encontrado = true
             }
         })
-        if(!encontrado){
+        if (!encontrado) {
             document.getElementById('erro').innerHTML = "CPF não encontrado"
+            document.getElementById('imagem').innerHTML = ""
+            document.getElementById('nome').innerHTML = ""
+            document.getElementById('sobrenome').innerHTML = ""
+            document.getElementById('cidade').innerHTML = ""
+            document.getElementById('pais').innerHTML = ""
+            document.getElementById('link').innerHTML = ""
         }
         console.log(banco)
     })
