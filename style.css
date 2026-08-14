@@ -154,3 +154,32 @@ header a:hover {
     justify-content: center;
     color: red;
 }
+
+.modal {
+    display: flex;
+    flex-direction: row;
+    color: #e6f2ff;
+    border-radius: 5px;
+    background-color: #307dd6;
+    padding: 0px;
+    font-size: 20px;
+
+    gap: 0px;
+}
+
+.modal div{
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-direita{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.modal-direita div{
+    display: flex;
+    flex-direction: column;
+}
